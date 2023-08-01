@@ -6,20 +6,33 @@
 //
 
 import SwiftUI
-
+//COMMENT
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        ZStack {
+            Color(.systemGray)
+                .ignoreSafeArea()
         }
-        .padding()
+        VStack {
+        Image("food")
+            .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
+        
+        Text("About me: Sumaya")
+            .font(.title)
+            .foregroundColor(Color(red: 0.933, green: 0.0, blue: 0.0))
+        
+        HStack (spacing: 20.0){
+            Text("I Love Food")
+                .font(.title)
+                .fontWeight(.thin)
+        }
+        }
+        
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
+    }
+    
+;struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
